@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="80" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Símbolo -->
+  <path d="M30 15 L45 40 L15 40 Z" fill="#00B5AC"/>
+  <path d="M45 40 L30 65 L15 40 Z" fill="#00B5AC"/>
+  
+  <!-- Texto "Supremus" -->
+  <text x="70" y="50" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#1E293B">
+    Supremus
+  </text>
+</svg>
