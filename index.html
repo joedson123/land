@@ -11,48 +11,159 @@
 			--supremus-text: #1E293B;
 			--supremus-light: #F8FAFC;
 			--supremus-accent: #00D4CA;
+			--container-width: min(1200px, 90%);
 		}
 		
 		body {
 			background-color: var(--supremus-light);
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			overflow-x: hidden;
 		}
 		
 		.elementor-button {
 			background-color: var(--supremus-primary) !important;
 			transition: background-color 0.3s ease !important;
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+			padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1.5rem, 3vw, 2rem);
+			font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+			border-radius: 8px;
+			display: inline-block;
+			text-align: center;
 		}
 		
 		.elementor-button:hover {
 			background-color: var(--supremus-accent) !important;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 		}
 		
 		.elementor-icon-box-title {
 			color: var(--supremus-text) !important;
+			font-size: clamp(1.2rem, 2vw, 1.5rem);
+			margin-bottom: 0.8rem;
+			font-weight: 600;
 		}
 		
 		.elementor-heading-title {
 			color: var(--supremus-text) !important;
+			font-size: clamp(1.8rem, 3.5vw, 3rem);
+			line-height: 1.2;
+			margin: clamp(1.5rem, 4vw, 3rem) 0;
+			font-weight: 700;
+			text-align: center;
 		}
 		
 		.elementor-icon {
 			background-color: var(--supremus-primary) !important;
-			transition: background-color 0.3s ease !important;
+			transition: all 0.3s ease !important;
+			padding: clamp(1.2rem, 2.5vw, 2rem);
+			font-size: clamp(1.8rem, 3vw, 2.5rem);
+			border-radius: 50%;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
 		}
 		
 		.elementor-icon:hover {
 			background-color: var(--supremus-accent) !important;
+			transform: scale(1.1);
 		}
 		
 		.elementor-icon-box-description {
 			color: var(--supremus-text) !important;
-			opacity: 0.8;
+			opacity: 0.85;
+			font-size: clamp(1rem, 1.6vw, 1.2rem);
+			line-height: 1.6;
+			max-width: 600px;
+			margin: 0 auto;
 		}
 		
-		img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		.elementor-widget-container {
+			padding: clamp(1.5rem, 4vw, 3rem);
+			margin: 0 auto;
+			width: var(--container-width);
+		}
+
+		.e-con-full {
+			padding: clamp(3rem, 6vw, 5rem) 0;
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.elementor-icon-box-wrapper {
+			display: flex;
+			align-items: center;
+			gap: clamp(1.5rem, 3vw, 2rem);
+			max-width: var(--container-width);
+			margin: 0 auto;
+			padding: clamp(1rem, 2vw, 2rem);
+		}
+
+		.e-con-full > .elementor-widget-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: clamp(2rem, 4vw, 3rem);
+			align-items: start;
+		}
+
+		@media (max-width: 1024px) {
+			:root {
+				--container-width: 95%;
+			}
+			
+			.elementor-heading-title {
+				font-size: clamp(1.5rem, 3vw, 2.5rem);
+			}
+		}
+
+		@media (max-width: 768px) {
+			.elementor-icon-box-wrapper {
+				text-align: center;
+				flex-direction: column;
+				align-items: center;
+				padding: clamp(1rem, 3vw, 1.5rem);
+			}
+
+			.elementor-icon-box-icon {
+				margin-bottom: 1.2rem;
+			}
+
+			.elementor-button {
+				width: 100%;
+				max-width: none;
+			}
+
+			.e-con-full {
+				padding: clamp(2rem, 5vw, 3rem) 0;
+			}
+
+			.elementor-icon-box-title {
+				font-size: 1.3rem;
+			}
+
+			.elementor-icon-box-description {
+				font-size: 1rem;
+			}
+
+			.e-con-full > .elementor-widget-container {
+				grid-template-columns: 1fr;
+				gap: 2rem;
+			}
+		}
 	</style>
 	
-	<div style="text-align: center; padding: 40px 20px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-		<img src="wp-content/uploads/2025/07/supremus-logo-new.svg" alt="Supremus" style="max-width: 250px; height: auto;">
+	<div style="text-align: center; padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem); background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+		<img src="wp-content/uploads/2025/07/supremus-logo-new.svg" alt="Supremus" style="max-width: clamp(150px, 30vw, 250px); height: auto;">
 	</div>
 	<script type='application/javascript'  id='pys-version-script'>console.log('PixelYourSite Free version 11.1.1');</script>
 <link rel="alternate" type="application/rss+xml" title="Feed para Fale conosco - Venda seu im&oacute;vel rapidamente &raquo;" href="https://vendax.online/feed/" />
