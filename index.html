@@ -4,9 +4,33 @@
 <head>
 	<meta charset="UTF-8">
 		<title>Home Equity - Supremus</title>
-    <!-- Favicon principal (Sublogo-2) -->
-    <link rel="icon" type="image/svg+xml" sizes="any" href="/Sublogo-2.svg?v=1">
-    <link rel="shortcut icon" type="image/svg+xml" sizes="any" href="/Sublogo-2.svg?v=1">
+    <!-- Favicon principal (Supremus) -->
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/supremus-favicon.svg?v=2">
+    <link rel="shortcut icon" type="image/svg+xml" sizes="any" href="/supremus-favicon.svg?v=2">
+    
+    <!-- Facebook Pixel adicional: 658220739869261 -->
+    <script>
+      (function() {
+        function initPixel() {
+          try {
+            if (typeof fbq === 'undefined') {
+              !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments): n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=true;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            }
+            fbq('init','658220739869261');
+            // Envia PageView apenas para o novo Pixel para evitar duplicidade
+            fbq('trackSingle','658220739869261','PageView');
+          } catch (e) {
+            // silenciar erros para não quebrar a página
+          }
+        }
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+          initPixel();
+        } else {
+          document.addEventListener('DOMContentLoaded', initPixel);
+        }
+      })();
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=658220739869261&ev=PageView&noscript=1"/></noscript>
     <meta name="theme-color" content="#00B5AC">
 <meta name='robots' content='max-image-preview:large' />
 	<style>
